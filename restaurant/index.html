@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Comptoir des Halles, restaurant (maquette)</title>
+<meta name="description" content="Maquette de démonstration d'un site de restaurant : carte, formule midi, avis, accès, réservation. Entreprise fictive.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%23b4462b%27/%3E%3Cpath d=%27M16 7s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z%27 fill=%27white%27/%3E%3C/svg%3E">
+<meta property="og:title" content="Le Comptoir des Halles, maquette de site de restaurant">
+<meta property="og:description" content="Maquette de démonstration d'un site de restaurant : carte, formule midi, avis, accès, réservation. Entreprise fictive.">
+<meta name="theme-color" content="#b4462b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --bg-soft:#faf5f0; --ink:#0f1b2d; --muted:#5a6779;
+    --brand:#b4462b; --brand-dark:#8f3520; --accent:#e0a526; --line:#e3e8ef;
+    --radius:14px; --max:1100px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  .demo{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:7px 16px}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;text-decoration:none}
+  .logo span.mark{width:36px;height:36px;border-radius:10px;background:var(--brand);display:grid;place-items:center;color:#fff}
+  .nav ul{display:flex;gap:26px;list-style:none;font-weight:500;font-size:15px}
+  .nav ul a{text-decoration:none;color:var(--muted)}
+  .nav ul a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:10px;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+  .btn:hover{background:var(--brand-dark)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--ink)}
+  .hero{background:linear-gradient(160deg,#fbefe8 0%,#ffffff 60%);padding:72px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .badge{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500;color:var(--muted);margin-bottom:18px}
+  .badge b{color:#16a34a}
+  h1,h2.title,.logo{font-family:Fraunces,Georgia,serif}
+  h1{font-size:clamp(32px,5vw,50px);line-height:1.1;letter-spacing:-.02em;font-weight:800;margin-bottom:18px}
+  h1 em{font-style:normal;color:var(--brand)}
+  .lead{font-size:19px;color:var(--muted);max-width:540px;margin-bottom:28px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+  .proof{display:flex;flex-wrap:wrap;gap:22px;font-size:14px;color:var(--muted)}
+  .proof strong{display:block;font-size:22px;color:var(--ink)}
+  .card-urgent{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 20px 50px -20px rgba(15,27,45,.25)}
+  .card-urgent h2{font-size:20px;margin-bottom:6px}
+  .card-urgent p{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .tel{display:block;text-align:center;font-size:26px;font-weight:800;color:var(--brand);text-decoration:none;padding:14px;border:2px dashed #ecc2b5;border-radius:12px;margin-bottom:14px}
+  .hours{font-size:14px;color:var(--muted);list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid var(--line)}
+  section{padding:80px 0}
+  .soft{background:var(--bg-soft)}
+  .kicker{text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:700;color:var(--brand);margin-bottom:10px}
+  h2.title{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.01em;line-height:1.2;margin-bottom:14px}
+  .sub{color:var(--muted);max-width:620px;margin-bottom:42px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .svc .ico{width:46px;height:46px;border-radius:12px;background:#fbefe8;color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
+  .svc h3{font-size:18px;margin-bottom:8px}
+  .svc p{color:var(--muted);font-size:15px}
+  .svc .price{margin-top:14px;font-weight:600;font-size:14px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+  .step{position:relative;padding-left:58px}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700}
+  .step h3{font-size:17px;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:15px}
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:10px}
+  .rev p{font-size:15px;margin-bottom:14px}
+  .rev small{color:var(--muted)}
+  .zone{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px}
+  .map{aspect-ratio:4/3;border-radius:var(--radius);background:
+      radial-gradient(circle at 50% 50%,rgba(180,70,43,.18) 0 34%,transparent 35%),
+      repeating-linear-gradient(0deg,#e9eef5 0 1px,transparent 1px 40px),
+      repeating-linear-gradient(90deg,#e9eef5 0 1px,transparent 1px 40px),#f8fafc;
+      border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--brand)}
+  form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;gap:16px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{font-size:14px;font-weight:600;display:grid;gap:6px}
+  input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand)}
+  textarea{min-height:110px;resize:vertical}
+  .note{font-size:13px;color:var(--muted)}
+  .ok{display:none;background:#ecfdf3;border:1px solid #a7f3c0;color:#166534;padding:14px;border-radius:10px;font-weight:500}
+  .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+  .info li{list-style:none;padding:14px 0;border-bottom:1px solid var(--line)}
+  .info b{display:block;font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+  footer{background:var(--ink);color:#b8c2d0;padding:36px 0;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+  .sticky-call{display:none}
+  @media (max-width:900px){
+    .hero-grid,.zone,.contact-grid{grid-template-columns:1fr}
+    .grid3,.reviews,.steps{grid-template-columns:1fr}
+    .nav ul{display:none}
+    section{padding:60px 0}
+    .hero{padding:48px 0}
+    .sticky-call{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:20;justify-content:center;box-shadow:0 10px 30px rgba(180,70,43,.4)}
+    footer{padding-bottom:96px}
+  }
+  @media (max-width:520px){ .row2{grid-template-columns:1fr} .nav .btn{display:none} }
+</style>
+</head>
+<body>
+
+<div class="demo">Maquette de démonstration : entreprise, coordonnées et avis fictifs.</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#"><span class="mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18"/><path d="M17 21V3c-2 0-3 3-3 7h3"/></svg></span>Le Comptoir des Halles</a>
+    <ul>
+      <li><a href="#carte">La carte</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#acces">Accès</a></li>
+      <li><a href="#contact">Réserver</a></li>
+    </ul>
+    <a class="btn" href="#contact">Réserver une table</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge"><b>●</b> Ouvert ce soir</span>
+        <h1>Cuisine de saison, <em>faite ici chaque matin</em>.</h1>
+        <p class="lead">Une carte courte qui change avec le marché, des produits de la région et une salle de 40 couverts où l'on prend le temps.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Réserver une table</a>
+          <a class="btn ghost" href="#carte">Voir la carte</a>
+        </div>
+        <div class="proof">
+          <div><strong>4,8 / 5</strong>sur 310 avis</div>
+          <div><strong>40</strong>couverts</div>
+          <div><strong>Terrasse</strong>aux beaux jours</div>
+        </div>
+      </div>
+      <aside class="card-urgent">
+        <h2>Réserver par téléphone</h2>
+        <p>Pour ce soir ou un groupe de plus de 8 personnes, appelez-nous directement.</p>
+        <a class="tel" href="tel:0000000000">00 00 00 00 00</a>
+        <ul class="hours">
+          <li><span>Mardi au samedi</span><span>12h - 14h</span></li>
+          <li><span>Jeudi au samedi soir</span><span>19h - 22h</span></li>
+          <li><span>Dimanche, lundi</span><span>Fermé</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="carte">
+    <div class="wrap">
+      <p class="kicker">La carte</p>
+      <h2 class="title">Ce mois-ci à la carte</h2>
+      <p class="sub">Exemple de carte. Elle change toutes les trois semaines, selon ce que proposent nos producteurs.</p>
+      <div class="grid3">
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18"/><path d="M17 21V3c-2 0-3 3-3 7h3"/></svg></div><h3>Entrées</h3><p>Velouté de potimarron, noisettes torréfiées. Œuf parfait, champignons des bois.</p><p class="price">De 8 € à 11 €</p></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18a8 8 0 0 1-16 0"/><path d="M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3"/></svg></div><h3>Plats</h3><p>Joue de bœuf braisée, purée maison. Filet de lieu, beurre blanc, poireaux fondants.</p><p class="price">De 18 € à 24 €</p></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15h16l-2 6H6z"/><path d="M6 15c0-4 3-7 6-7s6 3 6 7"/><path d="M12 8V5"/></svg></div><h3>Desserts</h3><p>Tarte fine aux pommes, caramel au beurre salé. Mousse au chocolat noir.</p><p class="price">De 7 € à 9 €</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap">
+      <p class="kicker">Le midi</p>
+      <h2 class="title">La formule du midi, en 45 minutes</h2>
+      <p class="sub">Pour ceux qui travaillent à côté : servi vite, cuisiné comme le soir.</p>
+      <div class="steps">
+        <div class="step"><h3>Entrée + plat</h3><p>Le plat du jour et une entrée au choix, 17 €.</p></div>
+        <div class="step"><h3>Plat + dessert</h3><p>Le plat du jour et le dessert du moment, 17 €.</p></div>
+        <div class="step"><h3>Formule complète</h3><p>Entrée, plat et dessert, 21 €. Café offert.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="avis">
+    <div class="wrap">
+      <p class="kicker">Avis clients</p>
+      <h2 class="title">Ce qu'en disent nos clients</h2>
+      <p class="sub">Exemples fictifs, pour montrer la mise en page.</p>
+      <div class="reviews">
+        <figure class="rev"><div class="stars">★★★★★</div><p>« La joue de bœuf fond dans la bouche. Service souriant, on reviendra. »</p><small>Client A., exemple</small></figure>
+        <figure class="rev"><div class="stars">★★★★★</div><p>« Formule du midi rapide et vraiment bonne pour le prix. »</p><small>Cliente B., exemple</small></figure>
+        <figure class="rev"><div class="stars">★★★★★</div><p>« Réservé pour un anniversaire à 12, tout était prêt à notre arrivée. »</p><small>Client C., exemple</small></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="acces" class="soft">
+    <div class="wrap zone">
+      <div>
+        <p class="kicker">Accès</p>
+        <h2 class="title">En centre-ville, à deux pas de la place</h2>
+        <p class="sub">Parking gratuit à 200 mètres. Salle accessible en fauteuil roulant.</p>
+        <div class="chips"><span>Groupes jusqu'à 25</span><span>Plats végétariens</span><span>Vente à emporter</span><span>Titres-restaurant</span></div>
+      </div>
+      <div class="map" role="img" aria-label="Plan d'accès au restaurant">Le restaurant</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker">Réservation</p>
+        <h2 class="title">Réservez votre table</h2>
+        <p class="sub">Confirmation par SMS dans l'heure, pendant les horaires d'ouverture.</p>
+        <ul class="info">
+          <li><b>Téléphone</b>00 00 00 00 00</li>
+          <li><b>Email</b>contact@exemple.fr</li>
+          <li><b>Horaires</b>Mar-sam midi, jeu-sam soir</li>
+        </ul>
+      </div>
+      <form id="devis" novalidate>
+        <div class="row2">
+          <label>Nom<input name="nom" required autocomplete="name"></label>
+          <label>Téléphone<input name="tel" type="tel" required autocomplete="tel"></label>
+        </div>
+        <div class="row2">
+          <label>Date<input name="date" type="date"></label>
+          <label>Couverts
+            <select name="type"><option>2 personnes</option><option>3 personnes</option><option>4 personnes</option><option>5 à 8 personnes</option><option>Groupe (plus de 8)</option></select>
+          </label>
+        </div>
+        <label>Un message ?<textarea name="msg" placeholder="Allergie, anniversaire, chaise haute..."></textarea></label>
+        <button class="btn" type="submit">Demander ma réservation</button>
+        <p class="note">Sur la maquette, rien n'est envoyé. Sur le vrai site, la demande arrive directement par email ou SMS.</p>
+        <div class="ok" id="ok">Merci, votre demande de réservation est partie. Confirmation par SMS dans l'heure. (démonstration)</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<a class="btn sticky-call" href="tel:0000000000"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> Réserver par téléphone</a>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Le Comptoir des Halles, entreprise fictive</span>
+    <span>Maquette réalisée par Mahamadou Samassa, création de sites</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('devis').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    if(!f.nom.value.trim() || !f.tel.value.trim()){ (f.nom.value.trim()?f.tel:f.nom).focus(); return; }
+    document.getElementById('ok').style.display='block';
+    f.querySelector('button').disabled = true;
+  });
+</script>
+</body>
+</html>
