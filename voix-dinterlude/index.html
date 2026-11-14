@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Voix d'Interlude, chorale de La Brède</title>
+<meta name="description" content="Les Voix d'Interlude, chorale associative de La Brède (Gironde). Répétitions le mardi, trois concerts par an. Nous cherchons de nouvelles voix : venez chanter avec nous.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#7a2e3b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%237a2e3b%27/%3E%3Cpath d=%27M13 22.5a3 3 0 1 1-2-2.8V9l10-2v11.5a3 3 0 1 1-2-2.8V10.4l-6 1.2z%27 fill=%27white%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fffdf9; --bg-soft:#f7efe6; --ink:#2a1a1e; --muted:#6b5a5e;
+    --brand:#7a2e3b; --brand-dark:#5e212c; --gold:#c9993e; --line:#eadfd3;
+    --radius:16px; --max:1040px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  .draft{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:7px 16px}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,253,249,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px;text-decoration:none}
+  .mark{width:36px;height:36px;border-radius:10px;background:var(--brand);display:grid;place-items:center;color:#fff;flex:none}
+  .nav ul{display:flex;gap:24px;list-style:none;font-weight:500;font-size:15px}
+  .nav ul a{text-decoration:none;color:var(--muted)}
+  .nav ul a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:12px;font-size:16px}
+  .btn:hover{background:var(--brand-dark)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--ink)}
+  .hero{background:radial-gradient(1200px 500px at 80% -10%,#f3e2d4 0%,transparent 60%),var(--bg);padding:80px 0 72px}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);background:#f4e6e2;padding:6px 12px;border-radius:999px;margin-bottom:20px}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15}
+  h1{font-size:clamp(36px,6vw,58px);max-width:15ch}
+  h1 em{font-style:normal;color:var(--brand)}
+  .lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:56ch;margin:20px 0 32px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  section{padding:72px 0}
+  section.soft{background:var(--bg-soft)}
+  h2{font-size:clamp(28px,4vw,38px);margin-bottom:16px}
+  .sub{color:var(--muted);max-width:60ch;margin-bottom:36px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card .ico{width:44px;height:44px;border-radius:12px;background:#f4e6e2;color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
+  .card h3{font-size:21px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:16px}
+  .join{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .steps{list-style:none;counter-reset:s;display:grid;gap:16px}
+  .steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start}
+  .steps li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px}
+  .quote{background:var(--brand);color:#fff;border-radius:var(--radius);padding:36px}
+  .quote p{font-family:Fraunces,Georgia,serif;font-size:24px;line-height:1.35}
+  .quote small{display:block;margin-top:14px;opacity:.8;font-size:15px}
+  .contact{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .contact a.card{text-decoration:none;display:block;transition:border-color .15s}
+  .contact a.card:hover{border-color:var(--brand)}
+  .contact strong{display:block;font-size:18px;margin-bottom:4px;word-break:break-word}
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+  @media (max-width:820px){
+    .nav ul{display:none}
+    .cards,.join,.contact{grid-template-columns:1fr}
+    .hero{padding:56px 0 48px}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="draft">Première version, à valider par l'association</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+      Les Voix d'Interlude
+    </a>
+    <ul>
+      <li><a href="#chorale">La chorale</a></li>
+      <li><a href="#rejoindre">Nous rejoindre</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Chorale de La Brède, Gironde</span>
+      <h1>Vous aimez chanter&nbsp;? <em>Venez chanter avec nous.</em></h1>
+      <p class="lead">Les Voix d'Interlude, c'est une chorale associative de La Brède, accompagnée par un chef de chœur. Nous répétons chaque mardi et donnons trois concerts par an. Aujourd'hui, nous cherchons de nouvelles voix.</p>
+      <div class="cta">
+        <a class="btn" href="#rejoindre">Rejoindre le chœur</a>
+        <a class="btn ghost" href="#chorale">Découvrir la chorale</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="chorale">
+    <div class="wrap">
+      <h2>La chorale</h2>
+      <p class="sub">Une association de chanteurs passionnés, qui se retrouvent chaque semaine pour le plaisir de chanter ensemble et de préparer leurs concerts.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <h3>Le mardi</h3>
+          <p>Répétition chaque semaine, sauf pendant les vacances scolaires.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.5 7 1-5 4.8 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.5l7-1z"/></svg></div>
+          <h3>Trois concerts par an</h3>
+          <p>Chaque saison, le chœur prépare et donne trois concerts.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+          <h3>Un chef de chœur</h3>
+          <p>Les répétitions sont dirigées par un chef de chœur, qui accompagne chaque voix.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rejoindre">
+    <div class="wrap join">
+      <div>
+        <h2>Nous rejoindre</h2>
+        <p class="sub">Le chœur a besoin de nouvelles voix. Si vous aimez chanter, faites le premier pas : c'est simple.</p>
+        <ol class="steps">
+          <li><div><strong>Écrivez-nous</strong><br><span style="color:var(--muted)">Un mail suffit : dites-nous qui vous êtes et ce que vous aimez chanter.</span></div></li>
+          <li><div><strong>Venez à une répétition</strong><br><span style="color:var(--muted)">Nous vous donnons l'horaire et le lieu, et vous venez écouter et essayer.</span></div></li>
+          <li><div><strong>Chantez avec nous</strong><br><span style="color:var(--muted)">Et préparez avec le chœur les prochains concerts.</span></div></li>
+        </ol>
+        <p style="margin-top:28px"><a class="btn" href="mailto:lesvoixdinterludelabrede@gmail.com?subject=Je%20souhaite%20rejoindre%20le%20ch%C5%93ur">Écrire à la chorale</a></p>
+      </div>
+      <div class="quote">
+        <p>Chaque nouvelle voix compte.</p>
+        <small>Répétitions le mardi, hors vacances scolaires. Horaire et lieu communiqués par mail.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="sub">Présidente : Mireille Guitet. Adresse de l'association : Mairie, 1 place Saint-Jean-d'Étampes, 33650 La Brède.</p>
+      <div class="contact">
+        <a class="card" href="mailto:lesvoixdinterludelabrede@gmail.com">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></div>
+          <strong>lesvoixdinterludelabrede@gmail.com</strong>
+          <span style="color:var(--muted)">Écrivez-nous, nous vous répondons.</span>
+        </a>
+        <a class="card" href="https://www.facebook.com/profile.php?id=61560530200276" target="_blank" rel="noopener">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <strong>Notre page Facebook</strong>
+          <span style="color:var(--muted)">Nouvelles du chœur et dates des concerts.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Les Voix d'Interlude de La Brède</span>
+    <span>Site réalisé par NexFlow</span>
+  </div>
+</footer>
+
+</body>
+</html>
